@@ -49,8 +49,6 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void initializeConfig() async {
-
-
     await loadConfigFlavor();
     // DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     // if (Platform.isAndroid) {
@@ -65,25 +63,24 @@ class _SplashPageState extends State<SplashPage> {
     //   return;
     // }
 
-    SharedPreferences.getInstance().then((preference) async {
-      final String keyAccountId = preference.getString(KEY_ACCESS_TOKEN) ?? "";
+     Navigator.pushReplacementNamed(context, '/home');
 
-      if (keyAccountId.isEmpty) {
-        final preferences = await SharedPreferences.getInstance();
-        await preferences.clear();
-        // remove badge app
-      } else {
+    // SharedPreferences.getInstance().then((preference) async {
+    //   final String keyAccountId = preference.getString(KEY_ACCESS_TOKEN) ?? "";
 
-      }
+    //   if (keyAccountId.isEmpty) {
+    //     final preferences = await SharedPreferences.getInstance();
+    //     await preferences.clear();
+    //     // remove badge app
+    //   } else {}
 
-      if (keyAccountId.isNotEmpty) {
-        Navigator.pushReplacementNamed(context, '/home');
-      } else {
-        Navigator.pushReplacementNamed(context, '/login');
-      }
-    });
+    //   if (keyAccountId.isNotEmpty) {
+    //     Navigator.pushReplacementNamed(context, '/home');
+    //   } else {
+    //     Navigator.pushReplacementNamed(context, '/login');
+    //   }
+    // });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +92,10 @@ class _SplashPageState extends State<SplashPage> {
           appBar: AppBar(
             systemOverlayStyle: SystemUiOverlayStyle(
               statusBarColor: Colors.white, // <-- SEE HERE
-              statusBarIconBrightness: Brightness.light, //<-- For Android SEE HERE (dark icons)
-              statusBarBrightness: Brightness.dark, //<-- For iOS SEE HERE (dark icons)
+              statusBarIconBrightness:
+                  Brightness.light, //<-- For Android SEE HERE (dark icons)
+              statusBarBrightness:
+                  Brightness.dark, //<-- For iOS SEE HERE (dark icons)
             ),
             toolbarHeight: 0,
             elevation: 0,
@@ -105,12 +104,11 @@ class _SplashPageState extends State<SplashPage> {
               child: Container(
             color: Colors.white,
             // padding: EdgeInsets.symmetric(horizontal: 28, vertical: 10),
-                padding: EdgeInsets.only(bottom: 100),
+            padding: EdgeInsets.only(bottom: 100),
             child: Center(
               child: Image.asset("assets/img/logo_app_horizontal.png",
-                  height: MediaQuery.of(context).size.height *.5,
-                  width: MediaQuery.of(context).size.width *.5
-              ),
+                  height: MediaQuery.of(context).size.height * .5,
+                  width: MediaQuery.of(context).size.width * .5),
             ),
           )),
         ),
@@ -122,5 +120,4 @@ class _SplashPageState extends State<SplashPage> {
       ],
     );
   }
-
 }

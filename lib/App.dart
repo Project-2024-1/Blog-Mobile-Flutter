@@ -7,7 +7,6 @@ import 'package:tudotaichinh/page/home/home_page.dart';
 import 'package:tudotaichinh/page/splash/splash_page.dart';
 import 'package:tudotaichinh/provider/home_tab/HomeTabNotifier.dart';
 
-
 class Application extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _Application();
@@ -22,21 +21,18 @@ class _Application extends State<Application> {
     super.initState();
   }
 
-
   @override
   void dispose() {
     // _subscription?.cancel();
     super.dispose();
-
   }
 
   Widget _root() {
+    print('run root');
     return MaterialApp(
       title: 'ONGRIT',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-
-      ],
+      localizationsDelegates: [],
       supportedLocales: [
         const Locale('en', ''), // English, no country code
         const Locale('ja', ''), // Japan language, no country code
@@ -50,7 +46,8 @@ class _Application extends State<Application> {
         ),
         primaryColorDark: Color.fromRGBO(24, 25, 27, 1),
         primaryColor: Color(0xff95C1E7),
-        textTheme: const TextTheme(bodyText2: TextStyle(color: Color(0xff1c1c1c))),
+        textTheme:
+            const TextTheme(bodyText2: TextStyle(color: Color(0xff1c1c1c))),
         tabBarTheme: TabBarTheme(),
       ),
       initialRoute: '/splash',
@@ -73,7 +70,6 @@ class _Application extends State<Application> {
         //   final getConversations = args?['get_conversations'];
         //   return  ChatListPageGroup(getConversations: getConversations);
         // },
-
       },
     );
   }
@@ -85,18 +81,19 @@ class _Application extends State<Application> {
           create: (context) => HomeTabNotifier(),
           lazy: false,
         ),
-
       ],
       child: buildWrapRootChild(),
     );
   }
 
   Widget buildWrapRootChild() {
-    if (_initialized == false) {
-      return MaterialApp(
-        routes: {"/": (context) => Container()},
-      ); // empty app
-    }
+    // if (_initialized == false) {
+    //   return MaterialApp(
+    //     routes: {"/": (context) => Container(
+    //       child: Text('error'),
+    //     )},
+    //   ); // empty app
+    // }
     return OverlaySupport.global(child: _root());
   }
 

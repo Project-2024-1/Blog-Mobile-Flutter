@@ -48,7 +48,13 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     switch (_currentPageIndex) {
       case 0:
       // return MessagePage2();
-        return Container();
+        return Container(
+          child: Center(
+            child: Text(
+              "coming soon",
+            )
+          )
+        );
       // case 1:
       //   return ManualListTwoPage();
       // case 2:
@@ -153,74 +159,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                     ),
                   ],
                 ),
-                /*
-                bottomNavigationBar:  SizedBox(
-                    height: MediaQuery.of(context).size.height *.3/4,
-                    child: BottomNavigationBar(
-                      currentIndex: _currentPageIndex,
-                      items: [
-                        BottomNavigationBarItem(
-                            icon: Container(
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v1_bland.png"), size: 24, color: Color(0xff51595C))
-                            ),
-                            activeIcon: Container(
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v1_dark.png"), size: 24, color: Color(0xff51595C))
-                            ),
-                            label: ''
-                        ),
-                        BottomNavigationBarItem(
-                            icon: Container(
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v2_bland.png"), size: 35, color: Color(0xff51595C))),
-                            activeIcon: Container(
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v2_dark.png"), size: 35, color: Color(0xff51595C))),
-                            label: ''
-                        ),
-                        BottomNavigationBarItem(
-                            icon: Container(
-                              child: ImageIcon(AssetImage("assets/img/ic_home_v3_bland.png"), size: 35, color: Color(0xff51595C)),
-                            ),
-                            activeIcon: Container(
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v3_dark.png"), size: 35, color: Color(0xff51595C))
-                            ),
-                            label: ''
-                        ),
-
-                        BottomNavigationBarItem(
-                          icon: Container(
-                            child: ImageIcon(AssetImage("assets/img/ic_home_v4_bland.png"), size: 24, color: Color(0xff51595C)),
-                          ),
-                          activeIcon: Container(
-                              child: ImageIcon(AssetImage("assets/img/ic_home_v4_dark.png"), size: 24, color: Color(0xff51595C))
-                          ),
-                          label: ''
-                        ),
-
-                        BottomNavigationBarItem(
-                            icon: Container(
-                              margin: EdgeInsets.only(bottom: 5),
-                              child: ImageIcon(AssetImage("assets/img/ic_home_v5_bland.png"), size: 24, color: Color(0xff51595C)),
-                            ),
-                            activeIcon: Container(
-                                margin: EdgeInsets.only(bottom: 5),
-                                child: ImageIcon(AssetImage("assets/img/ic_home_v5_dark.png"), size: 24, color: Color(0xff51595C))
-                            ),
-                            label: ''
-                        ),
-                      ],
-                      selectedFontSize: 10,
-                      unselectedFontSize: 10,
-                      backgroundColor: Colors.white,
-                      elevation: 0,
-                      selectedItemColor: Color(0xff51595C),
-                      selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-                      unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-                      showUnselectedLabels: true,
-                      type: BottomNavigationBarType.fixed,
-                      onTap: _onItemTapped,
-                    )
-                )
-
-                 */
+               
               )),
         )
     );

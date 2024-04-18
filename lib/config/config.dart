@@ -1,7 +1,7 @@
 //"API_ENDPOINT": "https://heronavi-dev.watermeru.com",
 
 const CONFIG_DEV = {
-  "API_ENDPOINT": "https://membersite.watermeru.com",
+  "API_ENDPOINT": "",
   "FLAVOR": "dev",
   "URL_SUBSCRIBE_PLAN": "/users/user-point-setting",
   "USER_PRO_PLAN_PRODUCT_ID": "",
@@ -9,7 +9,7 @@ const CONFIG_DEV = {
   "SOCKET_CONFIG" : "wss://ws-membersite.watermeru.com",
 };
 const CONFIG_STAGING = {
-  "API_ENDPOINT": "https://s.on-grit.jp",
+  "API_ENDPOINT": "",
   "FLAVOR": "staging",
   "URL_SUBSCRIBE_PLAN": "/users/user-point-setting",
   "USER_PRO_PLAN_PRODUCT_ID": "",
