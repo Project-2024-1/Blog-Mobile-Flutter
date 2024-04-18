@@ -46,9 +46,9 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     // final _isChekMessageNotifier = isChekMessageNotifier.getCheckSearch();
 
     switch (_currentPageIndex) {
-      // case 0:
-      // // return MessagePage2();
-      //   return HomePageLux();
+      case 0:
+      // return MessagePage2();
+        return Container();
       // case 1:
       //   return ManualListTwoPage();
       // case 2:
@@ -97,6 +97,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                 backgroundColor: Colors.white,
                 body: SizedBox.expand(
                   child:  PageView(
+
                     // controller: _pageController,
                       onPageChanged: (index) {
                         homeTabNotifier.changeTabIndex(index);
