@@ -33,15 +33,14 @@ class _Application extends State<Application> {
       title: 'ONGRIT',
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [],
-      supportedLocales: [
-        const Locale('en', ''), // English, no country code
-        const Locale('ja', ''), // Japan language, no country code
+      supportedLocales: const [
+        Locale('en', ''), // English, no country code
+        Locale('ja', ''), // Japan language, no country code
       ],
-      locale: Locale('ja', ''),
       theme: ThemeData(
         fontFamily: 'HiraginoKakuGothicPro',
         primarySwatch: Colors.blue,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xff95C1E7),
         ),
         primaryColorDark: Color.fromRGBO(24, 25, 27, 1),
@@ -53,7 +52,7 @@ class _Application extends State<Application> {
       initialRoute: '/splash',
       navigatorKey: _navigator,
       routes: {
-        '/splash': (context) => SplashPage(),
+        '/splash': (context) => const SplashPage(),
 
         // '/login': (context) => LoginPage(),
         //
@@ -63,7 +62,7 @@ class _Application extends State<Application> {
         //
         // '/auth/resend-verify-email-after': (context) => SendEmailForgotPasswordAfterPage(),
 
-        '/home': (context) => HomePage(),
+        '/home': (context) => const HomePage(),
 
         // '/chat_list_friend_group' : (context) {
         //   final args = ModalRoute.of(context)!.settings.arguments as Map?;

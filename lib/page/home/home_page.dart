@@ -6,6 +6,7 @@ import 'package:loading_overlay/loading_overlay.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:tudotaichinh/page/category/category_page.dart';
 
 import '../../common/snack_bar_helper/snack_bar_helper.dart';
 import '../../provider/home_tab/HomeTabNotifier.dart';
@@ -48,13 +49,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     switch (_currentPageIndex) {
       case 0:
       // return MessagePage2();
-        return Container(
-          child: Center(
-            child: Text(
-              "coming soon",
-            )
-          )
-        );
+        return CategoryPage();
       // case 1:
       //   return ManualListTwoPage();
       // case 2:
@@ -64,7 +59,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
       // case 4:
       //   return SettingPage();
       default:
-        return Center(
+        return const Center(
           child: Text(
             "coming soon",
             style: TextStyle(color: Colors.black),
@@ -122,38 +117,38 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                   onItemSelected: _onItemTapped,
                   items: <BottomNavyBarItem>[
                     BottomNavyBarItem(
-                      icon: Icon(Icons.home),
-                      title: Text('Home'),
+                      icon: const Icon(Icons.home),
+                      title: const Text('Home'),
                       activeColor: Theme.of(context).primaryColor,
-                      inactiveColor: Color(0xff97ACB3),
+                      inactiveColor: const Color(0xff97ACB3),
                       textAlign: TextAlign.center,
                     ),
                     BottomNavyBarItem(
-                      icon: Icon(Icons.volume_up),
-                      title: Text('ManualTwo'),
+                      icon: const Icon(Icons.volume_up),
+                      title: const Text('ManualTwo'),
                       activeColor: Colors.red,
-                      inactiveColor: Color(0xff97ACB3),
+                      inactiveColor: const Color(0xff97ACB3),
                       textAlign: TextAlign.center,
                     ),
                     BottomNavyBarItem(
-                      icon: Icon(Icons.people),
-                      title: Text('Friend'),
+                      icon: const Icon(Icons.people),
+                      title: const Text('Friend'),
                       activeColor: Colors.red,
-                      inactiveColor: Color(0xff97ACB3),
+                      inactiveColor: const Color(0xff97ACB3),
                       textAlign: TextAlign.center,
                     ),
                     BottomNavyBarItem(
-                      icon: Icon(Icons.message),
-                      title: Text(
+                      icon: const Icon(Icons.message),
+                      title: const Text(
                         'Messages',
                       ),
                       activeColor: Colors.red,
-                      inactiveColor: Color(0xff97ACB3),
+                      inactiveColor: const Color(0xff97ACB3),
                       textAlign: TextAlign.center,
                     ),
                     BottomNavyBarItem(
-                      icon: Icon(Icons.settings),
-                      title: Text('Settings'),
+                      icon: const Icon(Icons.settings),
+                      title: const Text('Settings'),
                       activeColor: Colors.blue,
                       textAlign: TextAlign.center,
                     ),

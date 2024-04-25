@@ -18,7 +18,7 @@ const CONFIG_STAGING = {
 };
 
 const CONFIG_PROD = {
-  "API_ENDPOINT": "https://on-grit.jp",
+  "API_ENDPOINT": "https://blog-back-end-2.onrender.com",
   // "API_ENDPOINT": "https://s.on-grit.jp",
   "FLAVOR": "prod",
   "URL_SUBSCRIBE_PLAN": "/users/user-point-setting",
