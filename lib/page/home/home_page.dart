@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
     switch (_currentPageIndex) {
       case 0:
       // return MessagePage2();
-        return CategoryPage();
+        return const CategoryPage();
       // case 1:
       //   return ManualListTwoPage();
       // case 2:

@@ -1,7 +1,7 @@
 //"API_ENDPOINT": "https://heronavi-dev.watermeru.com",
 
 const CONFIG_DEV = {
-  "API_ENDPOINT": "",
+  "API_ENDPOINT": "https://blog-back-end-2.onrender.com",
   "FLAVOR": "dev",
   "URL_SUBSCRIBE_PLAN": "/users/user-point-setting",
   "USER_PRO_PLAN_PRODUCT_ID": "",

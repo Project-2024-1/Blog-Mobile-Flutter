@@ -8,7 +8,7 @@ import '../../config/config.dart';
 import '../api.dart';
 import '../constant.dart';
 
-Future<T> baseGetNewApi<T>(String path,
+Future<T> baseGetNewApi<T>(String path, 
     {bool hasLog = true,
     String? endpoint,
     bool isAuth = true,

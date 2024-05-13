@@ -38,7 +38,7 @@ class _Application extends State<Application> {
         Locale('ja', ''), // Japan language, no country code
       ],
       theme: ThemeData(
-        fontFamily: 'HiraginoKakuGothicPro',
+        // fontFamily: 'HiraginoKakuGothicPro',
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xff95C1E7),

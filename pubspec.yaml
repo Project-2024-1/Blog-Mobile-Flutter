@@ -48,6 +48,7 @@ dependencies:
   lazy_loading_list: ^1.0.1
   cached_network_image: ^3.3.1
   flutter_widget_from_html: ^0.14.11
+  google_fonts: ^6.1.0
 
 
 dev_dependencies:
