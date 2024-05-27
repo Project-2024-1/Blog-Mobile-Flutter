@@ -25,6 +25,7 @@ class _CategoryPageState extends State<CategoryPage> {
   final String _error = "";
   bool _isLoading = false;
   int _page = 1;
+  String idCategory = '';
 
   /// List of body icon
   List<IconData> icons = [
@@ -61,7 +62,7 @@ class _CategoryPageState extends State<CategoryPage> {
     this._fetchDataListPost(page: 1);
   }
 
-  void _fetchDataListPost({int page = 1}) {
+  void _fetchDataListPost({int page = 1, }) {
     if (!mounted) {
       return;
     }
@@ -70,7 +71,7 @@ class _CategoryPageState extends State<CategoryPage> {
       this._isLoading = true;
     });
 
-    getListPostApi(idCategory: '').then((value) {
+    getListPostApi(idCategory: idCategory).then((value) {
       if (value != null) {
         _listCategorySite.addAll(value);
       }
@@ -87,7 +88,7 @@ class _CategoryPageState extends State<CategoryPage> {
     });
   }
 
-  void _fetchDataListCategory({int page = 1}) {
+  void _fetchDataListCategory({int page = 1,}) {
     if (!mounted) {
       return;
     }
